@@ -1,0 +1,60 @@
+<?php
+// index.php
+
+// Optional: start session if you need to track users
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <!-- Meta refresh: Redirect after 5 seconds -->
+    <meta http-equiv="refresh" content="5;url=portfolio.html">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .loading {
+            margin-top: 20px;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #ddd;
+            border-top: 4px solid #4cafef;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+    <script>
+        // JavaScript fallback redirect
+        setTimeout(function() {
+            window.location.href = "portfolio.html";
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="loading"></div>
+    </div>
+</body>
+</html>
